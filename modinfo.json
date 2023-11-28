@@ -10,7 +10,7 @@
   "signature": "not yet implemented",
   "forum":"",
   "priority": 100,
-  "icon": "",
+  "icon": "https://github.com/ferret-Master/system_search_bar/blob/main/icon.png?raw=true",
   "scenes": {
     "load_planet": [
       "coui://ui/mods/system_search_bar/system_search_bar.js",
