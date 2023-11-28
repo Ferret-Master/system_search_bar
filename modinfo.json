@@ -1,0 +1,29 @@
+{
+  "context": "client",
+  "identifier": "com.pa.ferretmaster.system-search-bar",
+  "display_name": "System Search Bar",
+  "description": "A system search bar with many filter options, works with all maps",
+  "author": "Ferretmaster",
+  "version": "1.00",
+  "build": "116982",
+  "date": "2023-11-28",
+  "signature": "not yet implemented",
+  "forum":"",
+  "priority": 100,
+  "icon": "",
+  "scenes": {
+    "load_planet": [
+      "coui://ui/mods/system_search_bar/system_search_bar.js",
+      "coui://ui/mods/system_search_bar/system_search_bar.css"
+    ]
+  },
+  "dependencies": [
+    "com.pa.conundrum.cShareSystems"
+  ],
+  "searchable": [
+    "map",
+    "search",
+    "system"
+],
+  "category": ["ui","titans", "in-game"]
+}

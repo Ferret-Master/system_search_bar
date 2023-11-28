@@ -1,0 +1,98 @@
+
+<div id = "searchContainer" data-bind="visible: searchSelected" >
+<!--div class='activeFaction' id = "sandbox-check">Faction<img id = "activeFaction" src='' onclick='model.toggleFaction()'/></div>-->
+
+
+
+    <div class="form-group" id = "unitFilterForm">
+    <label for="unitFilter">
+        <loc id = "checkbox-container">System Search:</loc><br>
+    </label>
+
+    <input id="mapNameFilter" type="text" name="unitFilter" class="input_text" placeholder="" data-bind="hasfocus: filterMapSelected,textInput: filterMapInput"/>
+    <br>
+    <label for="unitFilter">
+        <loc id = "checkbox-container">Author Search:</loc><br>
+    </label>
+    <input id="authorFilter" type="text" name="unitFilter" class="input_text" placeholder="" data-bind="hasfocus: filterAuthorSelected,textInput: filterAuthorInput"/>
+
+    <div id = "searchFilters">
+        <div>
+    <label id="game-difficulty-label" for="game-difficulty">
+        <loc>Biome</loc>
+    </label>
+    <select class="form-control" id="planetBiomes"
+    data-bind="options: planetBiomes, value: selectedBiome">
+    </select>
+</div>
+    <br>
+   <!--  <label id="game-difficulty-label" for="game-difficulty">
+        <loc>Spawn Setup</loc>
+    </label>
+    <select class="form-control" id="spawnSetups"
+        data-bind="options: spawnSetups, value: spawnSetup">
+    </select>
+    -->
+  
+    <label id="game-difficulty-label" for="game-difficulty" >
+        <loc>Minimum Planets</loc>
+    </label>
+    <input id="numberInput" type="text" name="planetMinFilter" class="input_text" data-bind="textInput: minimumPlanets" placeholder="0"/>
+    <label id="game-difficulty-label" for="game-difficulty">
+        <loc>Maximum Planets</loc>
+    </label>
+    <input id="numberInput" type="text" name="planetMaxFilter" class="input_text"  data-bind="textInput: maximumPlanets"  placeholder="16"/>
+    <br>
+    <div></div>
+  <!-- <label id="game-difficulty-label" for="game-difficulty">
+        <loc>Minimum Players</loc>
+    </label>
+    <input id="minimumPlayers" type="text" name="playerMinFilter" class="input_text"  data-bind="textInput: minimumPlayers"  placeholder="0"/>
+    <label id="game-difficulty-label" for="game-difficulty">
+        <loc>Maximum Players</loc>
+    </label>
+    <input id="maximumPlayers" type="text" name="playerMaxFilter" class="input_text" data-bind="textInput: maximumPlayers"  placeholder="32"/>
+    --> 
+    <label id="game-difficulty-label" for="game-difficulty">
+        <loc>Minimum Metal</loc>
+    </label>
+    <input id="numberInput" type="text" name="playerMinFilter" class="input_text"  data-bind="textInput: minimumMetalPerPlayer"  placeholder="0"/>
+    <label id="game-difficulty-label" for="game-difficulty">
+        <loc>Maximum Metal</loc>
+    </label>
+    <input id="numberInput" type="text" name="playerMaxFilter" class="input_text" data-bind="textInput: maximumMetalPerPlayer"  placeholder="32"/>
+    <br>
+    </div>
+
+
+
+
+
+  
+
+    <label id="game-difficulty-label" for="game-difficulty">
+        <loc>Max Systems Displayed</loc>
+    </label>
+    <input id="numberInput" type="text" name="systemMaxFilter" class="input_text" data-bind="textInput: maxSystems"  placeholder="100"/>
+    <br>
+
+  <!--  <div id = "checkbox-container">
+        <loc>highlight recently played</loc>
+        <div id = "recent-check">
+            <input type="checkbox"data-bind="checked: highlightRecent" />
+        </div>
+
+    <!--<div id = "checkbox-container">
+        <loc>shared</loc><div id = "sandbox-check"> <input type="checkbox"
+        data-bind="checked: shared" /></div>
+        -->
+    </div>
+    </div>
+    </div>
+</div>
+<script>
+
+    ko.cleanNode(document.getElementById("searchContainer"));
+    ko.applyBindings(model, document.getElementById("searchContainer"));
+
+</script>
