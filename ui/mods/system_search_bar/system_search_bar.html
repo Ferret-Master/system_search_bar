@@ -44,15 +44,23 @@
     <input id="numberInput" type="text" name="planetMaxFilter" class="input_text"  data-bind="textInput: maximumPlanets"  placeholder="16"/>
     <br>
     <div></div>
-  <!-- <label id="game-difficulty-label" for="game-difficulty">
+   <label id="game-difficulty-label" for="game-difficulty">
         <loc>Minimum Players</loc>
     </label>
-    <input id="minimumPlayers" type="text" name="playerMinFilter" class="input_text"  data-bind="textInput: minimumPlayers"  placeholder="0"/>
+    <input id="numberInput" type="text" name="playerMinFilter" class="input_text"  data-bind="textInput: minimumPlayers"  placeholder="2"/>
     <label id="game-difficulty-label" for="game-difficulty">
         <loc>Maximum Players</loc>
     </label>
-    <input id="maximumPlayers" type="text" name="playerMaxFilter" class="input_text" data-bind="textInput: maximumPlayers"  placeholder="32"/>
-    --> 
+    <input id="numberInput" type="text" name="playerMaxFilter" class="input_text" data-bind="textInput: maximumPlayers"  placeholder="32"/>
+    <div>
+    <label id="game-difficulty-label" for="game-difficulty">
+        <loc><B>include unspecified player Count</B></loc>
+    </label>
+            <input type="checkbox"data-bind="checked: includeUnknownPlayers" />
+        </div>
+    <br>
+   
+   
     <label id="game-difficulty-label" for="game-difficulty">
         <loc>Minimum Metal</loc>
     </label>

@@ -60,9 +60,9 @@ model.filterAuthorInput = ko.observable("");
 
 
 model.planetBiomes = ["none","earth","desert","ice","tropical","metal","lava","moon","gas","asteroid"];
-model.selectedBiome = ko.observable("None");
+model.selectedBiome = ko.observable("none");
 
-model.minimumPlanets = ko.observable(0);
+model.minimumPlanets = ko.observable("0");
 model.maximumPlanets = ko.observable("16");
 
 model.minimumPlayers = ko.observable("0");
@@ -77,6 +77,8 @@ model.spawnSetups = ["Any","1v1","2v2","3v3","4v4","5v5"];
 model.spawnSetup = ko.observable();
 
 model.highlightRecent = ko.observable(false);
+
+model.includeUnknownPlayers = ko.observable(true);
 
 model.searchSystems = ko.observable([])
 
@@ -95,11 +97,11 @@ model.systemSearch = ko.computed(function(){
 
   var selectedBiome = model.selectedBiome();
 
-  var minimumPlanets = model.minimumPlanets();
-  var maximumPlanets = model.maximumPlanets();
+  var minimumPlanets = Number(model.minimumPlanets()) || 0;
+  var maximumPlanets = Number(model.maximumPlanets()) || 16;
 
-  var minimumPlayers = model.minimumPlayers();
-  var maximumPlayers = model.maximumPlayers();
+  var minimumPlayers = Number(model.minimumPlayers()) || 2;
+  var maximumPlayers = Number(model.maximumPlayers()) || 16;
 
   var minimumMetalPerPlayer = Number(model.minimumMetalPerPlayer())|| 0;
   var maximumMetalPerPlayer = Number(model.maximumMetalPerPlayer())|| 0;
@@ -157,6 +159,13 @@ function passesFilters(system, mapFilter, authorFilter, biomeFilter, minPlanets,
     })
     if(!_.contains(biomes, biomeFilter) && biomeFilter !== "none"){return false}
     if((totalMetal > maxMetal || totalMetal < minMetal) && metalKey == false){return false}
+
+    if(system.players !== undefined){
+      if(minPlayers > system.players[0] || maxPlayers < system.players[1]){return false;}
+    }
+    else{
+      if(model.includeUnknownPlayers() == false){return false}
+    }
     return true
 }
    
