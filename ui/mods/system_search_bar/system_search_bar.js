@@ -117,8 +117,6 @@ model.systemSearch = ko.computed(function(){
 
   var shared = ko.observable(false);
   var spawnSetup = model.spawnSetup();
- console.log(minimumRadius)
- console.log(maximumRadius)
   model.highlightRecent = ko.observable(false);
   if(mapsLoaded() == true){
   _.map(tabs,function(tab){
@@ -158,7 +156,6 @@ function passesFilters(system, mapFilter, authorFilter, biomeFilter, minPlanets,
     var biomes = []
     var invalidRadius = false;
     _.map(system.planets, function(planet){
-      console.log(planet.planet.radius, minRadius, maxRadius)
       if(planet.planet.radius < minRadius || planet.planet.radius > maxRadius){invalidRadius = true}
       if(planet.metal_spots !== undefined){totalMetal += planet.metal_spots.length||0;}
 
