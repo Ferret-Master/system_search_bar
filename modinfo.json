@@ -18,7 +18,8 @@
     ]
   },
   "dependencies": [
-    "com.pa.conundrum.cShareSystems"
+    "com.pa.conundrum.cShareSystems",
+    "com.wondible.pa.compact_system_list"
   ],
   "searchable": [
     "map",
