@@ -24,6 +24,13 @@
     <select class="form-control" id="planetBiomes"
     data-bind="options: planetBiomes, value: selectedBiome">
     </select>
+
+    <label id="game-difficulty-label" for="game-difficulty">
+        <loc>Ranked Season</loc>
+    </label>
+    <select class="form-control" id="rankedSeason"
+    data-bind="options: rankedSeasons, value: selectedSeason">
+    </select>
 </div>
     <br>
    <!--  <label id="game-difficulty-label" for="game-difficulty">
@@ -92,6 +99,10 @@
     </label>
     <input id="numberInput" type="text" name="systemMaxFilter" class="input_text" data-bind="textInput: maxSystems"  placeholder="100"/>
     <br>
+
+    <label id="randomSystem" for="game-difficulty" data-bind="click: selectRandomSystem" >
+        <loc>Random Filtered System</loc>
+    </label>
 
   <!--  <div id = "checkbox-container">
         <loc>highlight recently played</loc>
