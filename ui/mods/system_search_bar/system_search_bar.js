@@ -277,8 +277,8 @@ var stringToArrayMap = {
   "9":season9Maps, 
   "10":season10Maps, 
   "11":season11Maps, 
+  "12(Bugged)":season12ActualMaps,
   "12":season12Maps,
-  "12(Actual)":season12ActualMaps,
   "All":allRankedMaps
 }
 
@@ -347,7 +347,7 @@ model.planetBiomes = ["none", "earth", "desert", "ice", "tropical", "metal", "la
 
 model.selectedBiome = ko.observable("none");
 
-model.rankedSeasons = ["All", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "12(Actual)", "ignore", "None"]
+model.rankedSeasons = ["All", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12(Bugged)", "12", "ignore", "None"]
 model.selectedSeason = ko.observable("ignore")
 
 model.minimumRadius = ko.observable("0");
