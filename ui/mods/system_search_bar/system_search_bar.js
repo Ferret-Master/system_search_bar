@@ -303,7 +303,7 @@ var stringToArrayMap = {
   "11":season11Maps, 
   "12(Bugged)":season12ActualMaps,
   "12":season12Maps,
-  "13":season13Maps,
+  "14":season13Maps,
   "All":allRankedMaps,
 }
 
