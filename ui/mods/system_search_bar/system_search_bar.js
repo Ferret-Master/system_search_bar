@@ -232,7 +232,7 @@ var season12Maps = [
   "Hemlock",
   "Turnpike",
   "Amadeus' Rift",
-  "Ashworth’s Garden",
+  "Ashworth's Garden",
   "Cascade",
   "City of Walkways",
   "Cold Reception",
@@ -263,26 +263,31 @@ var season12ActualMaps = [
   "Spindel Range"
 ]
 
-var factionTourneyMaps = [
-  "Checker",
-  "Mantle",
-  "Superbowl",
-  "Lugaan",
-  "Tia",
-  "Pivot",
-  "Tropics",
-  "Kelvin",
-  "Rotunda",
-  "Mirum",
-  "Utonaga",
-  "Divide",
-  "Molten Fortress",
-  "TheWall",
-  "AmazonasSafari",
-  "Tundra"
+
+var season13Maps = [
+    "Abandoned Facility",
+    "Abyss",
+    "Arctic",
+    "Experiencia",
+    "Forge Rebirth",
+    "Mean Time",
+    "Mukden",
+    "Shoreline LE",
+    "Phang Shores LE",
+    "Solitude",
+    "Sunbaked Gully",
+    "Crag",
+    "Demi-Mirum",
+    "Fluviaat",
+    "Nitre",
+    "Periculo",
+    "Ribbon",
+    "Steps",
+    "Tempo",
+    "Tia"
 ]
 
-var allRankedMaps = _.union(season1Maps, season2Maps, season3Maps, season4Maps, season5Maps, season6Maps, season7Maps, season8Maps, season9Maps, season10Maps, season11Maps, season12Maps)
+var allRankedMaps = _.union(season1Maps, season2Maps, season3Maps, season4Maps, season5Maps, season6Maps, season7Maps, season8Maps, season9Maps, season10Maps, season11Maps, season12Maps, season13Maps)
 
 var stringToArrayMap = {
   "1":season1Maps, 
@@ -298,8 +303,8 @@ var stringToArrayMap = {
   "11":season11Maps, 
   "12(Bugged)":season12ActualMaps,
   "12":season12Maps,
+  "13":season13Maps,
   "All":allRankedMaps,
-  "Faction Tourney Maps":factionTourneyMaps
 }
 
 var searchSelected = ko.computed(function () {
@@ -367,7 +372,7 @@ model.planetBiomes = ["none", "earth", "desert", "ice", "tropical", "metal", "la
 
 model.selectedBiome = ko.observable("none");
 
-model.rankedSeasons = ["All", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12(Bugged)", "12","Faction Tourney Maps", "ignore", "None"]
+model.rankedSeasons = ["All", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12(Bugged)", "12","13", "ignore", "None"]
 model.selectedSeason = ko.observable("ignore")
 
 model.minimumRadius = ko.observable("0");
