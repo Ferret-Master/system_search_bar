@@ -372,7 +372,7 @@ model.planetBiomes = ["none", "earth", "desert", "ice", "tropical", "metal", "la
 
 model.selectedBiome = ko.observable("none");
 
-model.rankedSeasons = ["All", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12(Bugged)", "12","13", "ignore", "None"]
+model.rankedSeasons = ["All", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12(Bugged)", "12","14", "ignore", "None"]
 model.selectedSeason = ko.observable("ignore")
 
 model.minimumRadius = ko.observable("0");
