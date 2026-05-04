@@ -287,6 +287,28 @@ var season13Maps = [
     "Tia"
 ]
 
+var season15Maps = [
+    "Coldbox",
+    "Dire Strait",
+    "Mukden",
+    "TheClassyBarren",
+    "Abyss LE",
+    "Blitz",
+    "Diahydri",
+    "Geonosis",
+    "Headwind",
+    "Hyde",
+    "Lock",
+    "Mantle",
+    "Rotunda",
+    "Shoreline LE",
+    "Sunbaked Gully",
+    "Tartarus",
+    "The Marne",
+    "Tropics LE",
+    "Utonaga"
+]
+
 var allRankedMaps = _.union(season1Maps, season2Maps, season3Maps, season4Maps, season5Maps, season6Maps, season7Maps, season8Maps, season9Maps, season10Maps, season11Maps, season12Maps, season13Maps)
 
 var stringToArrayMap = {
@@ -304,6 +326,7 @@ var stringToArrayMap = {
   "12(Bugged)":season12ActualMaps,
   "12":season12Maps,
   "14":season13Maps,
+  "15":season15Maps,
   "All":allRankedMaps,
 }
 
@@ -372,7 +395,7 @@ model.planetBiomes = ["none", "earth", "desert", "ice", "tropical", "metal", "la
 
 model.selectedBiome = ko.observable("none");
 
-model.rankedSeasons = ["All", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12(Bugged)", "12","14", "ignore", "None"]
+model.rankedSeasons = ["All", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12(Bugged)", "12","14","15", "ignore", "None"]
 model.selectedSeason = ko.observable("ignore")
 
 model.minimumRadius = ko.observable("0");
